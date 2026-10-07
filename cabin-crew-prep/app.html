@@ -1,0 +1,404 @@
+<title>Cabin Crew Prep</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap">
+<style>
+/* Layout: one centered column. A single large flip card is the whole stage; every control around it stays quiet. */
+:root {
+  --bg: #f5f5f7;
+  --surface: #ffffff;
+  --fg: #1d1d1f;
+  --muted: #6e6e73;
+  --faint: #86868b;
+  --line: rgba(0, 0, 0, .08);
+  --accent: #0066cc;
+  --accent-bg: #0071e3;
+  --accent-fg: #ffffff;
+  --seg: rgba(118, 118, 128, .14);
+  --seg-on: #ffffff;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .04), 0 30px 60px -28px rgba(0, 0, 0, .22);
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Figtree", "IBM Plex Sans Thai", "Segoe UI", sans-serif;
+  --radius: 28px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #000000; --surface: #1c1c1e; --fg: #f5f5f7; --muted: #a1a1a6; --faint: #86868b;
+    --line: rgba(255, 255, 255, .12); --accent: #2997ff; --accent-bg: #0071e3; --accent-fg: #ffffff;
+    --seg: rgba(118, 118, 128, .28); --seg-on: #636366;
+    --shadow: 0 0 0 1px rgba(255, 255, 255, .06);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #000000; --surface: #1c1c1e; --fg: #f5f5f7; --muted: #a1a1a6; --faint: #86868b;
+  --line: rgba(255, 255, 255, .12); --accent: #2997ff; --accent-bg: #0071e3; --accent-fg: #ffffff;
+  --seg: rgba(118, 118, 128, .28); --seg-on: #636366;
+  --shadow: 0 0 0 1px rgba(255, 255, 255, .06);
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font);
+  font-size: 17px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; touch-action: manipulation; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 8px; }
+
+/* One-screen app: the card takes whatever height the device leaves; long answers scroll inside the card. */
+.app {
+  max-width: 860px;
+  height: 100%;
+  margin: 0 auto;
+  padding-inline: max(20px, env(safe-area-inset-left, 0px), env(safe-area-inset-right, 0px));
+  padding-block: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+main { flex: 1 1 0; min-height: 340px; max-height: 720px; display: flex; flex-direction: column; }
+
+/* Header */
+.top { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.brand { font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--faint); }
+.seg { display: inline-flex; padding: 3px; border-radius: 999px; background: var(--seg); }
+.seg button {
+  min-height: 40px; padding: 8px 22px; border-radius: 999px; font-size: 15px; font-weight: 500; color: var(--muted);
+  transition: background .25s, color .25s;
+}
+.seg button[aria-selected="true"] { background: var(--seg-on); color: var(--fg); box-shadow: 0 1px 3px rgba(0, 0, 0, .12); }
+
+/* Category filter */
+.chips { align-self: stretch; min-width: 0; display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; padding-block: 2px; }
+.chips button:first-child { margin-left: auto; }
+.chips button:last-child { margin-right: auto; }
+.chips::-webkit-scrollbar { display: none; }
+.chips button { flex: none; min-height: 38px; padding: 6px 14px; border-radius: 999px; font-size: 14px; color: var(--muted); white-space: nowrap; }
+.chips button[aria-pressed="true"] { color: var(--fg); background: var(--seg); font-weight: 500; }
+
+/* Flip card */
+.stage { perspective: 1800px; flex: 1; min-height: 0; display: flex; }
+.card { flex: 1; min-width: 0; display: grid; grid-template: minmax(0, 1fr) / minmax(0, 1fr); touch-action: pan-y; cursor: pointer; transform-style: preserve-3d; transition: transform .7s cubic-bezier(.2, .8, .2, 1); border-radius: var(--radius); }
+.card.flipped { transform: rotateY(180deg); }
+.card.swap { animation: rise .45s cubic-bezier(.2, .8, .2, 1); }
+.card.no-anim { transition: none; }
+@keyframes rise { from { opacity: 0; transform: translateY(14px) scale(.985); } }
+.face {
+  grid-area: 1 / 1; min-width: 0; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain;
+  background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow);
+  padding: 36px 40px; display: flex; flex-direction: column; gap: 24px;
+  backface-visibility: hidden; -webkit-backface-visibility: hidden;
+}
+.face > * { flex-shrink: 0; }
+.face.front { -webkit-user-select: none; user-select: none; }
+.face.back { transform: rotateY(180deg); }
+.eyebrow { display: flex; justify-content: space-between; gap: 12px; font-size: 13px; font-weight: 600; letter-spacing: .04em; color: var(--faint); }
+.eyebrow .src { font-weight: 500; text-align: right; }
+.center { flex: 1 0 auto; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; gap: 16px; }
+.hint { font-size: 14px; color: var(--faint); text-align: center; }
+
+.q { margin: 0; font-size: clamp(28px, 5.4vw, 44px); line-height: 1.12; font-weight: 600; letter-spacing: -.022em; text-wrap: balance; }
+.q-th { margin: 2px 0 0; font-size: 16px; color: var(--muted); }
+.back-q { margin: 0; font-size: 17px; font-weight: 600; }
+.tap { margin: 0; font-size: clamp(40px, 9vw, 72px); line-height: 1; font-weight: 700; letter-spacing: -.035em; animation: breathe 2.4s ease-in-out infinite; }
+.tap-sub { font-size: 15px; color: var(--faint); letter-spacing: .02em; }
+@keyframes breathe { 50% { opacity: .45; transform: scale(.97); } }
+.card.rolling { cursor: default; }
+.card.rolling .q, .card.rolling .word { color: var(--faint); filter: blur(1.2px); }
+.word { margin: 0; font-size: clamp(44px, 11vw, 88px); line-height: 1.02; font-weight: 700; letter-spacing: -.035em; overflow-wrap: anywhere; }
+.pos { font-size: 15px; color: var(--faint); font-style: italic; }
+.say { width: 44px; height: 44px; border-radius: 50%; background: var(--seg); display: grid; place-items: center; color: var(--accent); }
+.say svg { width: 20px; height: 20px; }
+
+.struct-name { margin: 0; font-size: 24px; line-height: 1.2; font-weight: 600; letter-spacing: -.015em; }
+.struct-hint { margin: 4px 0 0; font-size: 15px; color: var(--muted); }
+.steps { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; }
+.steps li { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 16px; padding-block: 14px; border-top: 1px solid var(--line); }
+.steps .lab { font-size: 13px; font-weight: 600; letter-spacing: .04em; color: var(--accent); padding-top: 3px; }
+.steps p { margin: 0; }
+.tip { margin: 0; font-size: 15px; color: var(--muted); padding-top: 16px; border-top: 1px solid var(--line); }
+.tip b { color: var(--fg); font-weight: 600; }
+
+.meaning { margin: 0; font-size: clamp(30px, 6.4vw, 48px); line-height: 1.2; font-weight: 600; text-wrap: balance; }
+.usage { width: 100%; max-width: 30em; padding-top: 22px; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 6px; }
+.usage .lab { font-size: 13px; font-weight: 600; letter-spacing: .04em; color: var(--accent); }
+.usage .ex { margin: 0; font-size: 20px; line-height: 1.35; font-weight: 500; }
+.usage .ex-th { margin: 0; font-size: 16px; color: var(--muted); }
+
+/* Controls */
+.controls { display: flex; flex-direction: column; align-items: center; gap: 18px; }
+.row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.btn { min-height: 50px; padding: 12px 26px; border-radius: 999px; font-size: 17px; font-weight: 500; transition: transform .15s, opacity .15s; }
+.btn:active { transform: scale(.97); }
+.btn.primary { background: var(--accent-bg); color: var(--accent-fg); }
+.btn.quiet { background: var(--seg); color: var(--fg); }
+.meta { margin: 0; font-size: 14px; color: var(--faint); text-align: center; font-variant-numeric: tabular-nums; }
+.link { color: var(--accent); font-size: 14px; }
+.link:hover { text-decoration: underline; }
+
+.empty { flex: 1; justify-content: center; text-align: center; background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); padding: 72px 32px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.empty h2 { margin: 0; font-size: 32px; font-weight: 600; letter-spacing: -.02em; }
+.empty p { margin: 0 0 12px; color: var(--muted); }
+
+.foot { margin: 0; font-size: 13px; color: var(--faint); text-align: center; max-width: 46em; align-self: center; }
+
+@media (max-width: 560px) {
+  .face { padding: 26px 22px; }
+  .app { padding-block: 14px; gap: 14px; }
+  .row { width: 100%; }
+  .row .btn { flex: 1; padding-inline: 12px; }
+  .steps li { grid-template-columns: 1fr; gap: 2px; }
+  .seg button { padding: 8px 16px; }
+}
+@media (max-height: 700px) {
+  .brand { display: none; }
+  .app { padding-block: 12px; gap: 12px; }
+  .top { gap: 10px; }
+  .controls { gap: 8px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card, .card.swap, .tap { transition: none; animation: none; }
+}
+</style>
+
+<div class="app">
+  <header class="top">
+    <div class="brand">Cabin Crew Prep</div>
+    <div class="seg" role="tablist" aria-label="โหมดฝึก">
+      <button id="tab-questions" role="tab" aria-selected="true" data-mode="questions">คำถามสัมภาษณ์</button>
+      <button id="tab-vocab" role="tab" aria-selected="false" data-mode="vocab">คำศัพท์</button>
+    </div>
+    <div class="chips" id="chips" aria-label="หมวด"></div>
+  </header>
+
+  <main>
+    <div class="stage" id="stage">
+      <div class="card" id="card" role="button" tabindex="0" aria-label="พลิกการ์ด">
+        <section class="face front" id="front"></section>
+        <section class="face back" id="back"></section>
+      </div>
+    </div>
+    <div class="empty" id="empty" hidden>
+      <h2>ครบทั้งกองแล้ว</h2>
+      <p id="empty-text"></p>
+      <button class="btn primary" id="reset-empty">เริ่มกองนี้ใหม่</button>
+    </div>
+  </main>
+
+  <div class="controls">
+    <div class="row">
+      <button class="btn quiet" id="known">จำได้แล้ว</button>
+      <button class="btn primary" id="next">สุ่มใบถัดไป</button>
+    </div>
+    <p class="meta"><span id="meta"></span> <button class="link" id="reset" hidden>เริ่มใหม่</button></p>
+  </div>
+
+</div>
+
+<script src="q1.js"></script>
+<script src="q2.js"></script>
+<script src="v1.js"></script>
+<script src="v2.js"></script>
+<script>
+(function () {
+  var STRUCT = {
+    PPF:  { name: 'Present – Past – Future', hint: 'เล่าปัจจุบัน ย้อนอดีตสั้น ๆ แล้วปิดด้วยเป้าหมาย', steps: ['Present', 'Past', 'Future'] },
+    STAR: { name: 'STAR', hint: 'เล่าเหตุการณ์จริงหนึ่งเรื่อง: สถานการณ์ หน้าที่ สิ่งที่ทำ และผลลัพธ์', steps: ['Situation', 'Task', 'Action', 'Result'] },
+    PRE:  { name: 'Point – Reason – Example', hint: 'ตอบตรงประเด็นก่อน ให้เหตุผล แล้วยกตัวอย่างจริง', steps: ['Point', 'Reason', 'Example'] },
+    WAR:  { name: 'Weakness – Action – Result', hint: 'บอกจุดอ่อนจริง สิ่งที่ทำเพื่อแก้ และผลที่ดีขึ้น', steps: ['Weakness', 'Action', 'Result'] },
+    LEAF: { name: 'Listen – Empathize – Act – Follow up', hint: 'ฟังให้จบ แสดงความเข้าใจ ลงมือแก้ แล้วกลับไปติดตามผล', steps: ['Listen', 'Empathize', 'Act', 'Follow up'] },
+    SAFE: { name: 'Safety – Procedure – Communicate – Report', hint: 'ความปลอดภัยมาก่อน ทำตามขั้นตอน สื่อสารสุภาพชัดเจน แล้วรายงานหัวหน้า', steps: ['Safety first', 'Procedure', 'Communicate', 'Report'] },
+    ADL:  { name: 'Answer – Detail – Link', hint: 'ตอบสั้น ๆ เสริมรายละเอียดหนึ่งอย่าง แล้วโยงเข้าหางานลูกเรือ', steps: ['Answer', 'Detail', 'Link'] }
+  };
+  var CATS = {
+    questions: { intro: 'ทำความรู้จัก', motive: 'แรงจูงใจ', self: 'ตัวตน', past: 'ประสบการณ์', onboard: 'สถานการณ์บนเครื่อง', life: 'ทัศนคติและชีวิตลูกเรือ' },
+    vocab: { quality: 'บุคลิกและคุณสมบัติ', career: 'สัมภาษณ์และอาชีพ', service: 'งานบริการ', team: 'ทีมและการสื่อสาร', safety: 'ความปลอดภัย', cabin: 'เครื่องบินและห้องโดยสาร', ops: 'สนามบินและเที่ยวบิน', meal: 'อาหารและเครื่องดื่ม', medical: 'สุขภาพผู้โดยสาร' }
+  };
+
+  var DATA = { questions: [], vocab: [] };
+  (window.QUESTION_GROUPS || []).forEach(function (g) {
+    g[1].forEach(function (r) { DATA.questions.push({ id: r[0], cat: g[0], q: r[0], th: r[1], s: r[2], a: r[3], tip: r[4], src: r[5] || '' }); });
+  });
+  (window.VOCAB_GROUPS || []).forEach(function (g) {
+    g[1].forEach(function (r) { DATA.vocab.push({ id: r[0], cat: g[0], w: r[0], pos: r[1], th: r[2], ex: r[3], exTh: r[4] }); });
+  });
+
+  var store = {
+    get: function (k) { try { return JSON.parse(localStorage.getItem(k)) || []; } catch (e) { return []; } },
+    set: function (k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+  };
+  var state = {
+    mode: 'questions',
+    questions: { cat: 'all', queue: [], cur: null, started: false, known: new Set(store.get('ccp-known-questions')) },
+    vocab: { cat: 'all', queue: [], cur: null, started: false, known: new Set(store.get('ccp-known-vocab')) }
+  };
+
+  var $ = function (id) { return document.getElementById(id); };
+  var card = $('card'), front = $('front'), back = $('back');
+  var rolling = false;
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var canSpeak = 'speechSynthesis' in window && 'SpeechSynthesisUtterance' in window;
+
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function shuffle(a) { for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function pool(mode) {
+    var s = state[mode];
+    return DATA[mode].filter(function (x) { return (s.cat === 'all' || x.cat === s.cat) && !s.known.has(x.id); });
+  }
+
+  function draw() {
+    var s = state[state.mode];
+    if (!s.queue.length) {
+      s.queue = shuffle(pool(state.mode));
+      if (s.queue.length > 1 && s.queue[s.queue.length - 1] === s.cur) s.queue.reverse();
+    }
+    s.cur = s.queue.pop() || null;
+    render(true);
+  }
+
+  // Slot-machine draw: flick through random cards for a moment, then land on the real one.
+  function roll() {
+    var mode = state.mode, s = state[mode], items = pool(mode);
+    s.started = true;
+    if (reduce || items.length < 2) { draw(); return; }
+    rolling = true;
+    card.classList.remove('flipped'); card.classList.add('rolling');
+    $('known').hidden = true; $('next').hidden = true;
+    var t0 = Date.now();
+    (function tick() {
+      var x = items[Math.floor(Math.random() * items.length)];
+      front.innerHTML = '<div class="center"><h1 class="' + (mode === 'questions' ? 'q' : 'word') + '">' + esc(mode === 'questions' ? x.q : x.w) + '</h1></div>';
+      if (Date.now() - t0 < 1400) setTimeout(tick, 85);
+      else { rolling = false; card.classList.remove('rolling'); draw(); }
+    })();
+  }
+
+  function renderChips() {
+    var s = state[state.mode], cats = CATS[state.mode], html = '';
+    html += '<button data-cat="all" aria-pressed="' + (s.cat === 'all') + '">ทั้งหมด</button>';
+    Object.keys(cats).forEach(function (k) { html += '<button data-cat="' + k + '" aria-pressed="' + (s.cat === k) + '">' + cats[k] + '</button>'; });
+    $('chips').innerHTML = html;
+  }
+
+  function render(swap) {
+    var mode = state.mode, s = state[mode], x = s.cur;
+    var total = DATA[mode].filter(function (i) { return s.cat === 'all' || i.cat === s.cat; }).length;
+    var left = pool(mode).length;
+    var unit = mode === 'questions' ? 'คำถาม' : 'คำ';
+    $('meta').textContent = 'กองนี้มี ' + total + ' ' + unit + ' · จำได้แล้ว ' + (total - left);
+    $('reset').hidden = total === left;
+
+    if (!s.started) {
+      $('stage').hidden = false; $('empty').hidden = true; $('known').hidden = true; $('next').hidden = true;
+      card.classList.remove('flipped');
+      front.innerHTML = '<div class="center"><h1 class="tap">Tap here</h1><span class="tap-sub">' + (mode === 'questions' ? 'to draw a question' : 'to draw a word') + '</span></div>';
+      back.innerHTML = '';
+      return;
+    }
+    var done = !x;
+    $('stage').hidden = done; $('empty').hidden = !done;
+    $('known').hidden = done; $('next').hidden = done;
+    if (done) { $('empty-text').textContent = 'คุณจำได้ครบ ' + total + ' ' + unit + 'ในกองนี้แล้ว'; return; }
+
+    card.classList.add('no-anim'); card.classList.remove('flipped');
+    if (mode === 'questions') {
+      var st = STRUCT[x.s];
+      front.innerHTML =
+        '<div class="center"><h1 class="q">' + esc(x.q) + '</h1></div>' +
+        '<div class="hint">Answer out loud, then tap to flip</div>';
+      back.innerHTML =
+        '<div class="eyebrow"><span>' + CATS.questions[x.cat] + '</span><span class="src">' + (x.src ? 'มีรายงานจาก ' + esc(x.src) : '') + '</span></div>' +
+        '<div><p class="back-q">' + esc(x.q) + '</p><p class="q-th">' + esc(x.th) + '</p></div>' +
+        '<div><h2 class="struct-name">' + st.name + '</h2><p class="struct-hint">' + st.hint + '</p></div>' +
+        '<ol class="steps">' + x.a.map(function (t, i) { return '<li><span class="lab">' + (st.steps[i] || '') + '</span><p>' + esc(t) + '</p></li>'; }).join('') + '</ol>' +
+        '<p class="tip"><b>เคล็ดลับ</b> ' + esc(x.tip) + '</p>';
+    } else {
+      front.innerHTML =
+        '<div class="center"><h1 class="word">' + esc(x.w) + '</h1><span class="pos">' + esc(x.pos) + '</span>' +
+        (canSpeak ? '<button class="say" id="say" aria-label="ฟังเสียงอ่าน"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4zm12.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg></button>' : '') +
+        '</div><div class="hint">Guess the meaning, then tap to flip</div>';
+      back.innerHTML =
+        '<div class="eyebrow"><span>' + esc(x.w) + ' · ' + esc(x.pos) + '</span><span class="src">' + CATS.vocab[x.cat] + '</span></div>' +
+        '<div class="center"><h2 class="meaning">' + esc(x.th) + '</h2>' +
+        '<div class="usage"><span class="lab">วิธีใช้</span><p class="ex">' + esc(x.ex) + '</p><p class="ex-th">' + esc(x.exTh) + '</p></div></div>';
+    }
+    back.setAttribute('aria-hidden', 'true'); front.removeAttribute('aria-hidden');
+    void card.offsetWidth;
+    card.classList.remove('no-anim');
+    if (swap) { card.classList.remove('swap'); void card.offsetWidth; card.classList.add('swap'); }
+  }
+
+  function flip() {
+    if (rolling) return;
+    if (!state[state.mode].started) { roll(); return; }
+    var f = card.classList.toggle('flipped');
+    front.setAttribute('aria-hidden', f); back.setAttribute('aria-hidden', !f);
+  }
+  function setMode(m) {
+    state.mode = m;
+    ['questions', 'vocab'].forEach(function (k) { $('tab-' + k).setAttribute('aria-selected', k === m); });
+    try { history.replaceState(null, '', '#' + m); } catch (e) {}
+    renderChips();
+    if (!state[m].started) render(false);
+    else if (state[m].cur && !state[m].known.has(state[m].cur.id)) render(true); else draw();
+  }
+  function saveKnown() { store.set('ccp-known-' + state.mode, Array.from(state[state.mode].known)); }
+  function resetDeck() {
+    var s = state[state.mode];
+    DATA[state.mode].forEach(function (x) { if (s.cat === 'all' || x.cat === s.cat) s.known.delete(x.id); });
+    saveKnown(); s.queue = []; draw();
+  }
+
+  card.addEventListener('click', function (e) {
+    var say = e.target.closest('#say');
+    if (say) {
+      e.stopPropagation();
+      try { speechSynthesis.cancel(); var u = new SpeechSynthesisUtterance(state.vocab.cur.w); u.lang = 'en-US'; u.rate = .9; speechSynthesis.speak(u); } catch (err) {}
+      return;
+    }
+    flip();
+  });
+  // Swipe left on the card draws the next one (iPhone / iPad).
+  var touch = null;
+  card.addEventListener('touchstart', function (e) { var t = e.changedTouches[0]; touch = { x: t.clientX, y: t.clientY }; }, { passive: true });
+  card.addEventListener('touchend', function (e) {
+    if (!touch) return;
+    var t = e.changedTouches[0], dx = t.clientX - touch.x, dy = t.clientY - touch.y; touch = null;
+    if (dx < -70 && Math.abs(dy) < 50 && !rolling && state[state.mode].started) roll();
+  }, { passive: true });
+  card.addEventListener('keydown', function (e) { if ((e.key === 'Enter' || e.key === ' ') && e.target === card) { e.preventDefault(); flip(); } });
+  document.addEventListener('keydown', function (e) {
+    if (e.target.closest('button') || e.target === card) return;
+    if (e.key === ' ') { e.preventDefault(); flip(); }
+    if (e.key === 'ArrowRight' && !rolling && state[state.mode].started) roll();
+  });
+  $('next').addEventListener('click', function () { if (!rolling) roll(); });
+  $('known').addEventListener('click', function () {
+    var s = state[state.mode];
+    if (rolling) return;
+    if (s.cur) { s.known.add(s.cur.id); saveKnown(); }
+    if (pool(state.mode).length) roll(); else draw();
+  });
+  $('reset').addEventListener('click', resetDeck);
+  $('reset-empty').addEventListener('click', resetDeck);
+  $('chips').addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b || rolling) return;
+    var s = state[state.mode]; s.cat = b.dataset.cat; s.queue = []; s.cur = null;
+    renderChips(); if (s.started) roll(); else render(false);
+  });
+  document.querySelector('.seg').addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (b && !rolling && b.dataset.mode !== state.mode) setMode(b.dataset.mode);
+  });
+
+  setMode(location.hash === '#vocab' ? 'vocab' : 'questions');
+})();
+</script>
