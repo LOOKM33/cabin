@@ -218,6 +218,8 @@ main { flex: 1 1 0; min-height: 340px; max-height: 720px; display: flex; flex-di
 
 </div>
 
+<script src="base/q1.js"></script>
+<script src="base/q2.js"></script>
 <script src="q1.js"></script>
 <script src="q2.js"></script>
 <script src="v1.js"></script>
@@ -231,16 +233,17 @@ main { flex: 1 1 0; min-height: 340px; max-height: 720px; display: flex; flex-di
     WAR:  { name: 'Weakness – Action – Result', hint: 'บอกจุดอ่อนจริง สิ่งที่ทำเพื่อแก้ และผลที่ดีขึ้น', steps: ['Weakness', 'Action', 'Result'] },
     LEAF: { name: 'Listen – Empathize – Act – Follow up', hint: 'ฟังให้จบ แสดงความเข้าใจ ลงมือแก้ แล้วกลับไปติดตามผล', steps: ['Listen', 'Empathize', 'Act', 'Follow up'] },
     SAFE: { name: 'Safety – Procedure – Communicate – Report', hint: 'ความปลอดภัยมาก่อน ทำตามขั้นตอน สื่อสารสุภาพชัดเจน แล้วรายงานหัวหน้า', steps: ['Safety first', 'Procedure', 'Communicate', 'Report'] },
+    SWA:  { name: 'Strength – Weakness – Action', hint: 'บอกจุดแข็งพร้อมตัวอย่าง บอกจุดอ่อนจริง แล้วบอกสิ่งที่กำลังทำเพื่อแก้', steps: ['Strength', 'Weakness', 'Action'] },
     ADL:  { name: 'Answer – Detail – Link', hint: 'ตอบสั้น ๆ เสริมรายละเอียดหนึ่งอย่าง แล้วโยงเข้าหางานลูกเรือ', steps: ['Answer', 'Detail', 'Link'] }
   };
   var CATS = {
-    questions: { intro: 'ทำความรู้จัก', motive: 'แรงจูงใจ', self: 'ตัวตน', past: 'ประสบการณ์', onboard: 'สถานการณ์บนเครื่อง', life: 'ทัศนคติและชีวิตลูกเรือ' },
-    vocab: { quality: 'บุคลิกและคุณสมบัติ', career: 'สัมภาษณ์และอาชีพ', service: 'งานบริการ', team: 'ทีมและการสื่อสาร', safety: 'ความปลอดภัย', cabin: 'เครื่องบินและห้องโดยสาร', ops: 'สนามบินและเที่ยวบิน', meal: 'อาหารและเครื่องดื่ม', medical: 'สุขภาพผู้โดยสาร' }
+    questions: { pg: 'บางกอกแอร์เวย์ส', rd: 'งาน R&D', part: 'พาร์ทไทม์', mine: 'ทั่วไป (โปรไฟล์ฉัน)', intro: 'ทำความรู้จัก', motive: 'แรงจูงใจ', self: 'ตัวตน', past: 'ประสบการณ์', onboard: 'สถานการณ์บนเครื่อง', life: 'ทัศนคติและชีวิตลูกเรือ' },
+    vocab: { quality: 'คุณสมบัติลูกเรือ', food: 'อาหารและเครื่องดื่ม', fruit: 'ผลไม้', daily: 'ชีวิตประจำวัน', object: 'สิ่งของรอบตัว', travel: 'การเดินทาง', cartoon: 'การ์ตูน', people: 'ครอบครัว', nature: 'ธรรมชาติ', hobby: 'งานอดิเรก', abstract: 'นามธรรม' }
   };
 
   var DATA = { questions: [], vocab: [] };
   (window.QUESTION_GROUPS || []).forEach(function (g) {
-    g[1].forEach(function (r) { DATA.questions.push({ id: r[0], cat: g[0], q: r[0], th: r[1], s: r[2], a: r[3], tip: r[4], src: r[5] || '' }); });
+    g[1].forEach(function (r) { DATA.questions.push({ id: g[0] + '|' + r[0], cat: g[0], q: r[0], th: r[1], s: r[2], a: r[3], tip: r[4], src: r[5] || '' }); });
   });
   (window.VOCAB_GROUPS || []).forEach(function (g) {
     g[1].forEach(function (r) { DATA.vocab.push({ id: r[0], cat: g[0], w: r[0], pos: r[1], th: r[2], ex: r[3], exTh: r[4] }); });
@@ -339,11 +342,11 @@ main { flex: 1 1 0; min-height: 340px; max-height: 720px; display: flex; flex-di
       front.innerHTML =
         '<div class="center"><h1 class="word">' + esc(x.w) + '</h1><span class="pos">' + esc(x.pos) + '</span>' +
         (canSpeak ? '<button class="say" id="say" aria-label="ฟังเสียงอ่าน"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4zm12.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg></button>' : '') +
-        '</div><div class="hint">Guess the meaning, then tap to flip</div>';
+        '</div><div class="hint">Speak for 1 minute, then tap to flip</div>';
       back.innerHTML =
         '<div class="eyebrow"><span>' + esc(x.w) + ' · ' + esc(x.pos) + '</span><span class="src">' + CATS.vocab[x.cat] + '</span></div>' +
         '<div class="center"><h2 class="meaning">' + esc(x.th) + '</h2>' +
-        '<div class="usage"><span class="lab">วิธีใช้</span><p class="ex">' + esc(x.ex) + '</p><p class="ex-th">' + esc(x.exTh) + '</p></div></div>';
+        '<div class="usage"><span class="lab">ไอเดียพูด · Point – Reason – Example – Point</span><p class="ex">' + esc(x.ex) + '</p><p class="ex-th">' + esc(x.exTh) + '</p></div></div>';
     }
     back.setAttribute('aria-hidden', 'true'); front.removeAttribute('aria-hidden');
     void card.offsetWidth;
