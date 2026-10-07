@@ -1,0 +1,378 @@
+(window.QUESTION_GROUPS = window.QUESTION_GROUPS || []).push(
+["past", [
+["Tell me about a time you handled a difficult customer.", "เล่าถึงครั้งที่คุณรับมือกับลูกค้าที่รับมือยาก", "STAR", [
+ "At the hotel, a guest arrived at midnight and his booked room had been given to someone else by mistake.",
+ "As the only receptionist on duty, I had to solve it and keep him as a customer.",
+ "I let him finish, apologised sincerely, upgraded him to a suite at no charge and carried his bags up myself.",
+ "He calmed down, thanked me the next morning and has stayed with us three more times since."],
+ "อย่าเรียกลูกค้าว่าแย่หรือน่ารำคาญ ให้เล่าแบบเข้าใจความรู้สึกเขา", "Emirates, Qatar Airways (traveldidi)"],
+["Tell me about a time you went above and beyond for a customer.", "เล่าถึงครั้งที่คุณทำเกินความคาดหมายเพื่อลูกค้า", "STAR", [
+ "An elderly guest at our café mentioned it was her birthday and that her family lived abroad.",
+ "It wasn't part of my job, but I wanted her to feel celebrated.",
+ "I asked my manager for permission, decorated a slice of cake with a candle, and the team sang for her.",
+ "She cried happy tears, came back every week after that, and our manager made birthday surprises a regular practice."],
+ "เลือกเรื่องที่คุณคิดริเริ่มเอง ไม่ใช่สิ่งที่อยู่ในหน้าที่อยู่แล้ว", "Emirates (Studio Images UK)"],
+["Tell me about a conflict you had with a colleague.", "เล่าถึงความขัดแย้งกับเพื่อนร่วมงาน", "STAR", [
+ "A colleague and I disagreed about how to divide closing duties, and she felt I was leaving her the harder tasks.",
+ "I needed to fix the relationship, because tension between us was affecting the whole shift.",
+ "I invited her for coffee, listened to her side without interrupting, apologised for not noticing, and we made a rotating checklist together.",
+ "The duties became fair, we work well together now, and the checklist is used by the whole team."],
+ "ห้ามโทษอีกฝ่าย ให้แสดงว่าคุณเป็นคนเริ่มเข้าไปคุยก่อน", "Qatar Airways (Pantip), Emirates"],
+["Tell me about a time you had a miscommunication with a colleague.", "เล่าถึงครั้งที่สื่อสารผิดพลาดกับเพื่อนร่วมงาน", "STAR", [
+ "During a busy handover, I told my colleague a guest needed a 'late check-out', but she understood 'late check-in'.",
+ "The room was nearly given away, and I was responsible for the handover.",
+ "I caught it when I double-checked the system, corrected it right away, and suggested we write key requests in the logbook instead of only saying them.",
+ "The guest never noticed, and written handovers cut our mistakes noticeably."],
+ "จบด้วยสิ่งที่เปลี่ยนในวิธีสื่อสาร เช่น ทวนซ้ำหรือจดบันทึก", "Emirates (Studio Images UK)"],
+["Tell me about a stressful time in your life.", "เล่าถึงช่วงเวลาที่เครียดในชีวิต", "STAR", [
+ "In my last year of university, my father was in hospital for a month during my final exams.",
+ "I had to support my family while still finishing my degree on time.",
+ "I made a strict daily schedule, studied at the hospital in the evenings and asked my lecturers for advice early.",
+ "My father recovered, I graduated on time, and I learned I can stay organised and steady in a hard period."],
+ "เลือกเรื่องที่ผ่านมาแล้วและเล่าได้โดยไม่สะเทือนใจระหว่างสัมภาษณ์", "Emirates (Studio Images UK)"],
+["Tell me about a mistake you made at work and what you learned.", "เล่าถึงความผิดพลาดในงานและสิ่งที่ได้เรียนรู้", "STAR", [
+ "At the café I once entered a large catering order for the wrong date.",
+ "The customer needed 50 lunch boxes for a meeting, and it was my responsibility to fix it.",
+ "I told my manager immediately, apologised to the customer, and the team and I prepared the order in 40 minutes while I arranged delivery.",
+ "It arrived only ten minutes late. Since then I repeat every order back to the customer before confirming."],
+ "ยอมรับผิดเร็ว แก้ไข และมีวิธีป้องกันไม่ให้เกิดซ้ำ", "Emirates (Lemon8)"],
+["Tell me about a time you worked as part of a team.", "เล่าถึงประสบการณ์การทำงานเป็นทีม", "STAR", [
+ "Our hotel hosted a wedding for 400 guests, and two staff members called in sick that morning.",
+ "The team had to deliver the same service with fewer people.",
+ "I offered to cover both the welcome desk and drinks service, and we agreed on hand signals so we could ask for help without shouting.",
+ "The event ran on time, the couple wrote a five-star review, and our manager praised how we supported each other."],
+ "พูดคำว่า we ให้มาก แต่ต้องบอกชัดว่าตัวคุณทำอะไร", "Emirates (Lemon8)"],
+["Tell me about a time you worked in a multicultural environment.", "เล่าถึงประสบการณ์ทำงานในสภาพแวดล้อมหลากวัฒนธรรม", "STAR", [
+ "During my Work and Travel programme I worked in a resort kitchen with colleagues from six countries.",
+ "We had to serve breakfast to 300 guests every morning despite different languages and working styles.",
+ "I learned greetings in each colleague's language, asked how they preferred to receive feedback and used simple, clear English.",
+ "We became a close team, and I learned that respect and curiosity solve most cultural misunderstandings."],
+ "ใช้คำว่า respect, open-minded, adapt และยกสิ่งที่คุณปรับจริง ๆ", "Qatar Airways (traveldidi)"],
+["Have you ever changed yourself after receiving feedback?", "เคยปรับปรุงตัวเองหลังได้รับคำติชมไหม", "STAR", [
+ "In my first job, my supervisor told me I spoke too quickly with foreign guests.",
+ "I needed to make sure every guest understood me the first time.",
+ "I slowed down, started pausing after key information and asked 'Is that clear for you?' at the end.",
+ "Guests stopped asking me to repeat myself, and my supervisor mentioned the improvement in my next review."],
+ "แสดงว่ารับคำติได้โดยไม่ต่อต้าน และเปลี่ยนพฤติกรรมจริง", "Qatar Airways (Pantip)"],
+["Have you ever won an award or been recognised with your team? How did you feel?", "เคยได้รับรางวัลหรือคำชมร่วมกับทีมไหม รู้สึกอย่างไร", "STAR", [
+ "Last year our front office was competing for the hotel group's 'Best Service Team' award.",
+ "My part was to improve our online guest review score.",
+ "I suggested a simple follow-up call to every guest on their first evening, and the whole team took it on.",
+ "Our score rose from 8.4 to 9.1 and we won. I felt proud, mostly because it was something we achieved together."],
+ "ให้เครดิตทีม ถ้าไม่เคยได้รางวัลก็ใช้คำชมจากหัวหน้าหรือลูกค้าแทน", "Qatar Airways (Pantip)"],
+["What is the most challenging situation you have faced at work?", "สถานการณ์ที่ท้าทายที่สุดในงานคืออะไร", "STAR", [
+ "During the rainy season our hotel lost power for three hours with a full house.",
+ "As the senior person on shift, I had to keep 200 guests safe and informed.",
+ "I sent staff to every floor with torches, checked the lifts for trapped guests, and gave updates in the lobby every 20 minutes.",
+ "Nobody was hurt, complaints were few, and several guests thanked us for staying calm."],
+ "เลือกเรื่องที่มีมิติความปลอดภัยด้วยจะได้เปรียบ", "Qatar Airways (Fly to Success)"],
+["Tell me about a time you had to follow a rule you didn't agree with.", "เล่าถึงครั้งที่ต้องทำตามกฎที่คุณไม่เห็นด้วย", "STAR", [
+ "My company introduced a rule that we couldn't give refunds without a manager's signature, even for small amounts.",
+ "I felt it slowed service down, but my job was to follow it.",
+ "I followed the rule fully, explained it politely to customers, and later gave my manager figures showing the waiting times.",
+ "After a month the company allowed small refunds without a signature. I learned to follow first and suggest changes the right way."],
+ "ต้องแสดงว่าทำตามกฎก่อนเสมอ แล้วค่อยเสนอความเห็นผ่านช่องทางที่ถูกต้อง", ""],
+["Tell me about a time you had to adapt to a sudden change.", "เล่าถึงครั้งที่ต้องปรับตัวกับการเปลี่ยนแปลงกะทันหัน", "STAR", [
+ "One morning I was told I'd be moved from the front desk to the concierge team for two weeks, starting that day.",
+ "I had to learn a new role immediately without lowering service quality.",
+ "I asked for the top ten guest requests, studied the local map at lunch and followed an experienced colleague for the first few hours.",
+ "By day three I worked on my own, and the manager later asked me to cover concierge regularly."],
+ "ลูกเรือถูกเปลี่ยนเที่ยวบินและตำแหน่งบ่อย เรื่องนี้ตรงกับงานมาก", ""],
+["Tell me about a time you solved a problem quickly.", "เล่าถึงครั้งที่แก้ปัญหาได้อย่างรวดเร็ว", "STAR", [
+ "A tour group of 30 arrived at our restaurant an hour early, before their tables were ready.",
+ "I had to keep them comfortable without disturbing other guests.",
+ "I seated them in the garden, served welcome drinks within five minutes and asked the kitchen to send starters first.",
+ "The group was happy, the tour leader booked with us again, and my manager adopted the garden as our standard waiting area."],
+ "เน้นความเร็วในการตัดสินใจและการคิดถึงลูกค้าคนอื่นด้วย", ""],
+["Tell me about a time you couldn't give a customer what they wanted.", "เล่าถึงครั้งที่ไม่สามารถให้สิ่งที่ลูกค้าต้องการได้", "STAR", [
+ "A guest demanded a sea-view room, but the hotel was fully booked.",
+ "I had to say no while keeping him satisfied.",
+ "I apologised, explained the situation honestly, offered the best available room with a free breakfast, and put him first on the waiting list.",
+ "A sea-view room became free the next day and I moved him straight away. He wrote that he appreciated being told the truth."],
+ "สูตรคือ ปฏิเสธอย่างสุภาพ + ให้ทางเลือก + ติดตามผล", ""],
+["Tell me about a time you took the lead.", "เล่าถึงครั้งที่คุณเป็นผู้นำ", "STAR", [
+ "Our supervisor was suddenly absent on the busiest day of a holiday weekend.",
+ "Someone had to organise the shift, and I had the most experience.",
+ "I divided the tasks by each person's strengths, set short check-ins every two hours and handled the complaints myself.",
+ "We served a record number of customers with no major complaints, and I was later promoted to shift leader."],
+ "ผู้นำที่ดีในสายตากรรมการคือคนที่ช่วยทีม ไม่ใช่คนที่สั่ง", ""],
+["Tell me about a time you helped a colleague.", "เล่าถึงครั้งที่ช่วยเหลือเพื่อนร่วมงาน", "STAR", [
+ "A new colleague was struggling with our ordering system and making mistakes during rush hour.",
+ "She wasn't my trainee, but her mistakes were affecting customers and her confidence.",
+ "I stayed 30 minutes after my shift for three days to practise with her and made her a one-page guide.",
+ "Within a week she worked confidently on her own, and she now trains other new staff with the same guide."],
+ "แสดงว่าคุณสังเกตเห็นเองและช่วยโดยไม่มีใครสั่ง", ""],
+["Tell me about a time you worked under time pressure.", "เล่าถึงครั้งที่ทำงานแข่งกับเวลา", "STAR", [
+ "At the airport lounge where I interned, a delayed flight suddenly sent 80 extra passengers to us at once.",
+ "We had 20 minutes to refill the food and prepare seats before they arrived.",
+ "I took the buffet, a colleague took the seating, and we kept each other updated by radio.",
+ "Everything was ready in time, and the lounge manager thanked us by name in the team briefing."],
+ "ใส่กรอบเวลาเป็นตัวเลขเพื่อให้เห็นความกดดันชัดเจน", ""],
+["Tell me about a time you made a decision without your supervisor.", "เล่าถึงครั้งที่ต้องตัดสินใจเองโดยไม่มีหัวหน้า", "STAR", [
+ "On a night shift, a guest reported a strong burning smell on the fourth floor and my manager wasn't answering her phone.",
+ "I had to decide whether to act or wait.",
+ "I followed our fire procedure: sent security to check, prepared the guest list and moved the nearest guests to the lobby.",
+ "It was an overheated air conditioner and nobody was harmed. My manager said I'd done exactly the right thing."],
+ "เลือกการตัดสินใจที่อยู่ในกรอบของขั้นตอน ไม่ใช่การแหกกฎ", ""],
+["Tell me about a time you received a compliment from a customer.", "เล่าถึงครั้งที่ได้รับคำชมจากลูกค้า", "STAR", [
+ "A family with a child who has a severe peanut allergy visited our restaurant.",
+ "They were anxious, and I wanted them to be able to enjoy their meal safely.",
+ "I checked every dish with the chef, marked their order clearly and brought the food to their table myself.",
+ "The mother wrote a letter to our manager with my name in it, and they became regular guests."],
+ "เลือกคำชมที่เกิดจากความใส่ใจรายละเอียดหรือความปลอดภัย", ""],
+["Have you worked with international customers before?", "เคยทำงานกับลูกค้าต่างชาติไหม", "STAR", [
+ "Yes. At my hotel around 70 percent of guests are from abroad, mostly Europe, China and the Middle East.",
+ "My role is to make each of them comfortable, whatever their language or customs.",
+ "I learned basic greetings in five languages, studied dietary and prayer needs and use simple English with gestures when needed.",
+ "Guests often mention feeling understood, and I've come to really enjoy the variety."],
+ "ยกตัวอย่างความต้องการเฉพาะทางวัฒนธรรมที่คุณเคยดูแล", "Qatar Airways (traveldidi)"],
+["Tell me about a time you had to learn something new quickly.", "เล่าถึงครั้งที่ต้องเรียนรู้สิ่งใหม่อย่างรวดเร็ว", "STAR", [
+ "My hotel switched to a new reservation system with only three days of training.",
+ "I had to be fully confident by the first live day, because I was on the morning shift.",
+ "I practised on the test system after work, wrote my own shortcut notes and asked the trainer every question I had.",
+ "I handled the first day without errors and shared my notes with the rest of the team."],
+ "การเทรนลูกเรือเข้มข้นและสอบทุกสัปดาห์ เรื่องนี้ช่วยยืนยันว่าคุณเรียนรู้เร็ว", ""],
+["Tell me about a time you had to say no to a customer.", "เล่าถึงครั้งที่ต้องปฏิเสธลูกค้า", "STAR", [
+ "A customer at the bar who had clearly drunk too much asked for another round.",
+ "By company policy and for his safety, I had to refuse.",
+ "I spoke quietly so he wouldn't be embarrassed, offered water and snacks instead and asked his friend to help get him a taxi.",
+ "He accepted without a scene, and he came back the next week to apologise and thank me."],
+ "ตรงกับสถานการณ์บนเครื่องมาก เน้นการรักษาหน้าลูกค้า", ""]
+]],
+["onboard", [
+["What would you do if a passenger refused to follow safety instructions?", "ถ้าผู้โดยสารไม่ยอมทำตามคำแนะนำด้านความปลอดภัย คุณจะทำอย่างไร", "SAFE", [
+ "Safety rules are not optional, so I wouldn't ignore it, even if the passenger seemed upset.",
+ "I'd politely repeat the instruction and explain the reason, for example why the seatbelt must be fastened for landing.",
+ "I'd stay calm and respectful, at eye level, without arguing in front of other passengers.",
+ "If they still refused, I'd inform the senior crew member immediately and follow their instructions."],
+ "คำสำคัญ: politely, explain the reason, inform the senior ห้ามบอกว่าจะปล่อยผ่าน", "Qatar Airways (traveldidi)"],
+["What would you do if a passenger was unhappy with the service?", "ถ้าผู้โดยสารไม่พอใจการบริการ คุณจะทำอย่างไร", "LEAF", [
+ "I'd give them my full attention and let them explain without interrupting.",
+ "I'd apologise sincerely and show I understand, for example: 'I'm sorry you've had this experience, I understand how frustrating that is.'",
+ "Then I'd offer what I can within company policy, such as an alternative meal or a different solution, and tell them clearly what I'm doing.",
+ "I'd check on them again later in the flight and report the feedback to my senior."],
+ "อย่ารับปากสิ่งที่ทำไม่ได้ และอย่าโทษเพื่อนร่วมงานหรือบริษัท", "Qatar Airways (Fly to Success)"],
+["How would you handle a conflict between two passengers?", "คุณจะจัดการอย่างไรเมื่อผู้โดยสารสองคนขัดแย้งกัน", "LEAF", [
+ "I'd approach calmly and listen to each passenger separately, without taking sides.",
+ "I'd acknowledge both of them: 'I can see this is uncomfortable for both of you.'",
+ "Then I'd suggest a practical solution, such as offering one of them another seat if one is available.",
+ "I'd keep an eye on the area afterwards and inform the senior crew in case it starts again."],
+ "ความเป็นกลางคือหัวใจ ถ้าเริ่มรุนแรงให้ถือเป็นเรื่องความปลอดภัยและแจ้งหัวหน้าทันที", "Qatar Airways (Fly to Success)"],
+["What would you do in an emergency situation?", "คุณจะทำอย่างไรในสถานการณ์ฉุกเฉิน", "SAFE", [
+ "My first priority would be the safety of passengers and crew, and I'd stay calm because passengers copy the crew's behaviour.",
+ "I'd follow the procedures from my training exactly and act on the captain's and senior crew's commands.",
+ "I'd give passengers short, loud, clear instructions and help those who need assistance.",
+ "I'd keep the senior crew updated on my area and report everything afterwards."],
+ "อย่าพยายามอธิบายเทคนิคที่ยังไม่เคยเรียน พูดว่า follow my training and procedures", "Qatar Airways (Fly to Success)"],
+["How would you deal with an intoxicated passenger?", "คุณจะรับมือกับผู้โดยสารที่เมาอย่างไร", "SAFE", [
+ "An intoxicated passenger can become a safety risk, so I'd act early.",
+ "I'd politely stop serving alcohol, following company policy, and offer water, food or a soft drink instead.",
+ "I'd speak quietly and respectfully so the passenger doesn't feel embarrassed in front of others.",
+ "I'd tell my colleagues and the senior crew, so nobody else serves them and we can watch the situation together."],
+ "ต้องพูดถึงการแจ้งเพื่อนลูกเรือ เพื่อไม่ให้มีคนอื่นเสิร์ฟต่อ", ""],
+["A passenger's meal choice has run out. What would you do?", "อาหารที่ผู้โดยสารเลือกหมด คุณจะทำอย่างไร", "LEAF", [
+ "I'd hear the passenger out and find out whether it's a preference or a dietary need.",
+ "I'd apologise sincerely: 'I'm very sorry, I understand you were looking forward to that.'",
+ "I'd describe the other option in an appealing way and check with colleagues in the other galley for a spare meal.",
+ "Later I'd come back with something extra if possible, such as fruit or a snack, and make sure they're comfortable."],
+ "ถ้าเป็นอาหารเฉพาะทางศาสนาหรือแพ้อาหาร ต้องจริงจังกว่าและแจ้งหัวหน้า", ""],
+["A passenger insists on moving to a business class seat. What would you do?", "ผู้โดยสารยืนยันจะย้ายไปนั่งชั้นธุรกิจ คุณจะทำอย่างไร", "LEAF", [
+ "I'd listen to find the real reason, such as a broken seat, a noisy neighbour or simply wanting more space.",
+ "I'd show understanding: 'I understand you'd like to be more comfortable.'",
+ "I'd explain politely that upgrades can't be given onboard, then solve the actual problem, perhaps with another economy seat, a pillow or a blanket.",
+ "I'd check back later and inform my senior about the request."],
+ "ปฏิเสธอย่างสุภาพและเสนอทางเลือก อย่าอ้างว่าไม่ใช่หน้าที่", ""],
+["A baby is crying and other passengers are complaining. What would you do?", "เด็กทารกร้องไห้และผู้โดยสารคนอื่นเริ่มบ่น คุณจะทำอย่างไร", "LEAF", [
+ "First I'd approach the parent gently and ask how I can help, without making them feel blamed.",
+ "I'd reassure them: 'Please don't worry, flying can be hard for little ones.'",
+ "I'd offer warm water for milk, a toy or space in the galley to walk the baby, and offer earplugs or another seat to the passengers nearby.",
+ "I'd check on both the family and the neighbours again after a while."],
+ "ดูแลทั้งสองฝ่าย พ่อแม่มักเครียดที่สุดในสถานการณ์นี้", ""],
+["How would you help a passenger who is afraid of flying?", "คุณจะช่วยผู้โดยสารที่กลัวการบินอย่างไร", "LEAF", [
+ "I'd kneel down to their eye level and ask how they're feeling.",
+ "I'd tell them that many people feel the same and that they're not alone.",
+ "I'd explain normal sounds and turbulence in simple words, offer water and suggest slow breathing.",
+ "I'd tell them where I'll be and visit them regularly, especially before landing."],
+ "ภาษากายสำคัญ: ย่อตัวลง สบตา พูดช้าและนุ่มนวล", ""],
+["What would you do if you found a passenger smoking in the lavatory?", "ถ้าพบผู้โดยสารสูบบุหรี่ในห้องน้ำ คุณจะทำอย่างไร", "SAFE", [
+ "Smoking onboard is a serious fire risk, so I'd act immediately.",
+ "I'd ask the passenger to stop, make sure the cigarette is completely out, and check the waste bin for fire, following procedure.",
+ "I'd explain firmly but politely that smoking is against the law on every flight.",
+ "I'd report it to the senior crew and the captain, who decide what happens next."],
+ "ต้องพูดถึงการตรวจถังขยะในห้องน้ำ เพราะเป็นจุดเสี่ยงไฟไหม้", ""],
+["What would you do if a passenger fainted during the flight?", "ถ้าผู้โดยสารเป็นลมระหว่างเที่ยวบิน คุณจะทำอย่างไร", "SAFE", [
+ "I'd go to the passenger immediately, check if they respond and are breathing, and stay with them.",
+ "I'd call for help from other crew and follow our first aid training, with the medical kit and oxygen ready if needed.",
+ "I'd ask the people nearby what happened and keep other passengers calm and out of the way.",
+ "The senior crew would be informed at once, so the captain knows and a doctor can be called for if needed."],
+ "พูดว่า follow first aid training อย่าวินิจฉัยโรคเอง", ""],
+["How would you react if a passenger was rude to you?", "ถ้าผู้โดยสารพูดจาหยาบคายกับคุณ คุณจะทำอย่างไร", "LEAF", [
+ "I'd stay calm and listen, because the rudeness is usually about the situation and not about me.",
+ "I'd acknowledge their feelings: 'I can see you're upset, and I'd like to help.'",
+ "I'd focus on solving the actual problem and keep my voice and body language polite.",
+ "Afterwards I'd let my senior know, and if it became abusive, I'd ask for support rather than argue."],
+ "ประโยคทอง: I wouldn't take it personally", ""],
+["What would you do if you saw a colleague breaking a safety rule?", "ถ้าเห็นเพื่อนร่วมงานทำผิดกฎความปลอดภัย คุณจะทำอย่างไร", "SAFE", [
+ "Safety comes before friendship, so I couldn't ignore it.",
+ "If it's an immediate risk, I'd correct it or remind my colleague on the spot.",
+ "I'd speak to them privately and respectfully, as they may simply have forgotten.",
+ "If it was serious or happened again, I'd report it to the senior crew, as that's my responsibility."],
+ "กรรมการทดสอบความซื่อสัตย์ คำตอบว่าจะไม่บอกใครคือคำตอบที่ผิด", ""],
+["A passenger keeps using their phone during take-off. What would you do?", "ผู้โดยสารยังใช้โทรศัพท์ระหว่างเครื่องขึ้น คุณจะทำอย่างไร", "SAFE", [
+ "Take-off is a critical phase, so the cabin must be secure.",
+ "I'd politely ask them to switch to flight mode, as the regulations require.",
+ "I'd give the reason briefly and with a smile, and wait until they've done it.",
+ "If they refused, I'd inform the senior crew before take-off."],
+ "อธิบายเหตุผลสั้น ๆ ทุกครั้ง ผู้โดยสารทำตามง่ายขึ้นเมื่อรู้เหตุผล", ""],
+["A passenger makes inappropriate comments or asks for your phone number. What would you do?", "ผู้โดยสารพูดจาไม่เหมาะสมหรือขอเบอร์โทรคุณ คุณจะทำอย่างไร", "LEAF", [
+ "I'd stay professional and not react emotionally.",
+ "I'd answer politely but clearly: 'Thank you, but I keep my work and private life separate.'",
+ "Then I'd bring the conversation back to service and keep a professional distance.",
+ "If it continued, I'd tell my senior and ask a colleague to take over that area."],
+ "สุภาพแต่ชัดเจน และกล้าขอความช่วยเหลือจากทีม", ""],
+["The flight is delayed and passengers are angry. What would you do?", "เที่ยวบินล่าช้าและผู้โดยสารโกรธ คุณจะทำอย่างไร", "LEAF", [
+ "I'd listen to their concerns, especially those with connecting flights.",
+ "I'd apologise for the inconvenience and show I understand how stressful a delay is.",
+ "I'd share accurate updates from the captain as soon as we have them, offer water and help with comfort.",
+ "I'd walk through the cabin regularly so passengers can see we haven't forgotten them."],
+ "อย่าเดาเวลาหรือสาเหตุเอง ให้ข้อมูลเท่าที่ได้รับการยืนยัน", ""],
+["You accidentally spill a drink on a passenger. What would you do?", "คุณทำเครื่องดื่มหกใส่ผู้โดยสารโดยไม่ตั้งใจ คุณจะทำอย่างไร", "LEAF", [
+ "I'd stop right away and give the passenger my full attention.",
+ "I'd apologise sincerely and take full responsibility, with no excuses.",
+ "I'd bring towels and napkins, check that they weren't burned if the drink was hot, and offer a blanket or another seat if theirs is wet.",
+ "I'd report it to my senior, follow the cleaning or compensation procedure and check on them again."],
+ "ถ้าเป็นเครื่องดื่มร้อน ต้องถามเรื่องการบาดเจ็บก่อนเรื่องเสื้อผ้า", ""],
+["A passenger won't return to their seat during turbulence. What would you do?", "ผู้โดยสารไม่ยอมกลับไปนั่งระหว่างเครื่องตกหลุมอากาศ คุณจะทำอย่างไร", "SAFE", [
+ "Turbulence can cause serious injuries, so getting everyone seated is urgent.",
+ "I'd instruct the passenger clearly to sit and fasten their seatbelt, as the seatbelt sign is on.",
+ "I'd use a firm but polite voice and explain it's for their own safety.",
+ "If they refused, I'd inform the senior crew, and I'd secure myself too if the turbulence became severe."],
+ "ลูกเรือต้องดูแลความปลอดภัยของตัวเองด้วย พูดประเด็นนี้จะได้คะแนน", ""],
+["Two passengers claim the same seat. What would you do?", "ผู้โดยสารสองคนอ้างสิทธิ์ที่นั่งเดียวกัน คุณจะทำอย่างไร", "LEAF", [
+ "I'd greet both passengers and ask to see their boarding passes.",
+ "I'd thank them for their patience and say I'll sort it out quickly.",
+ "Often one person has misread the row or the date, so I'd guide them to the correct seat. If it's a real double booking, I'd ask the ground staff or my senior.",
+ "I'd make sure both are seated comfortably and thank them again."],
+ "เริ่มจากการขอดู boarding pass เสมอ อย่าตัดสินว่าใครผิดก่อน", ""],
+["Can you serve alcohol to passengers?", "คุณเสิร์ฟเครื่องดื่มแอลกอฮอล์ให้ผู้โดยสารได้ไหม", "PRE", [
+ "Yes, I can. It's part of the service and I'm comfortable with it.",
+ "Serving alcohol is a professional duty, and it comes with the responsibility to serve it carefully.",
+ "I've worked in a hotel bar, where I learned to check a guest's age and to stop serving politely when someone has had enough."],
+ "สายการบินตะวันออกกลางถามบ่อย ตอบให้ชัดว่าทำได้และรู้ขอบเขต", "Qatar Airways (Pantip)"],
+["How would you help a passenger who doesn't speak any language you know?", "คุณจะช่วยผู้โดยสารที่พูดภาษาที่คุณไม่รู้ได้อย่างไร", "LEAF", [
+ "I'd stay patient and watch their gestures closely to understand what they need.",
+ "I'd smile and use open body language so they don't feel embarrassed.",
+ "I'd use simple words, gestures, pictures on the menu or safety card, and ask whether a colleague or another passenger speaks their language.",
+ "I'd come back to check that the problem was really solved."],
+ "พูดถึงการใช้เพื่อนลูกเรือหลายสัญชาติเป็นตัวช่วย", ""],
+["What would you do if you disagreed with your senior crew member's decision?", "ถ้าคุณไม่เห็นด้วยกับการตัดสินใจของหัวหน้าลูกเรือ คุณจะทำอย่างไร", "PRE", [
+ "I'd follow the decision, unless it put safety at risk.",
+ "The senior has more experience and the full picture, and a flight needs a clear chain of command.",
+ "If I still had concerns, I'd raise them privately and politely after the service. If it was about safety, I'd speak up at once."],
+ "แยกให้ชัด: เรื่องบริการให้ทำตาม เรื่องความปลอดภัยให้พูดทันที", ""],
+["An elderly passenger travelling alone looks confused. What would you do?", "ผู้โดยสารสูงอายุที่เดินทางคนเดียวดูสับสน คุณจะทำอย่างไร", "LEAF", [
+ "I'd approach gently, introduce myself and ask if I can help.",
+ "I'd speak slowly and warmly, so they feel looked after.",
+ "I'd help with their bag, seatbelt and call button, explain where the lavatory is, and help with meal trays and arrival forms.",
+ "I'd visit them often during the flight and tell my colleagues, so the ground staff can assist on arrival."],
+ "แสดงความใส่ใจเชิงรุก ไม่รอให้ผู้โดยสารกดเรียก", ""],
+["A passenger's bag is too big for the overhead locker. What would you do?", "กระเป๋าของผู้โดยสารใหญ่เกินช่องเก็บสัมภาระ คุณจะทำอย่างไร", "LEAF", [
+ "I'd ask what's inside, in case there are valuables, medicine or fragile items.",
+ "I'd acknowledge that they'd prefer to keep the bag close.",
+ "I'd look for space in another locker, and if there's none, explain that it has to go in the hold for safety and ask them to take out valuables and medication.",
+ "I'd give them the tag, explain where to collect it and thank them for cooperating."],
+ "ทางเดินและทางออกต้องโล่งเสมอ นี่คือประเด็นความปลอดภัย", ""]
+]],
+["life", [
+["What will be the biggest challenge of living abroad?", "อะไรคือความท้าทายที่สุดของการไปอยู่ต่างประเทศ", "PRE", [
+ "I think the biggest challenge will be building a new routine far from my family.",
+ "Everything changes at once, from the food to the working hours, and that takes time to adjust to.",
+ "I've already lived abroad for four months, where I learned to cook for myself, make friends quickly and call home regularly, so I see it as a chance to grow."],
+ "มองความท้าทายเป็นโอกาส อย่าบ่นเรื่องอากาศ อาหาร หรือกฎระเบียบ", "Qatar Airways (Fly to Success)"],
+["How would you adapt to a new culture?", "คุณจะปรับตัวเข้ากับวัฒนธรรมใหม่อย่างไร", "PRE", [
+ "By being open-minded, respectful and curious.",
+ "I'm a guest in that country, so it's my responsibility to learn the local customs and laws.",
+ "Before moving I'd read about the dress code and traditions, and once there I'd learn basic phrases and ask colleagues to show me around."],
+ "ใช้คำว่า adapt, open-minded, respectful ตามที่โค้ชแนะนำ", "Qatar Airways (Fly to Success)"],
+["Why is safety important for cabin crew?", "ทำไมความปลอดภัยจึงสำคัญสำหรับลูกเรือ", "PRE", [
+ "Safety is the main reason cabin crew are onboard.",
+ "Passengers trust us with their lives, and in an emergency we're the ones trained to protect them.",
+ "That's why crew check equipment before every flight and watch the cabin all the time. Good service only matters if everyone arrives safely."],
+ "ห้ามเอาบริการขึ้นก่อนความปลอดภัยในคำตอบนี้เด็ดขาด", "Qatar Airways (Fly to Success), Emirates"],
+["How do you handle long working hours, night flights and jet lag?", "คุณรับมือกับชั่วโมงทำงานยาว เที่ยวบินกลางคืน และเจ็ตแล็กอย่างไร", "PRE", [
+ "I look after my body with discipline, because it's my main working tool.",
+ "Irregular hours are part of the job, so rest, food and exercise have to be planned.",
+ "I already work night shifts twice a week. I sleep at fixed times, drink plenty of water and exercise three times a week, and I rarely get sick."],
+ "ยกหลักฐานว่าคุณเคยทำงานเป็นกะหรือยืนนาน ๆ ได้จริง", "Emirates, Qatar Airways (traveldidi)"],
+["How do you feel about being away from family during holidays?", "รู้สึกอย่างไรที่ต้องห่างครอบครัวในช่วงวันหยุดเทศกาล", "PRE", [
+ "I'll miss them, of course, but I've accepted it as part of the career.",
+ "People travel most during holidays, so that's when passengers need us most.",
+ "I've worked every New Year's Eve for three years. My family and I simply celebrate on another day, and it has never been a problem."],
+ "ยอมรับว่าคิดถึงได้ แต่ต้องแสดงว่าครอบครัวเข้าใจและคุณจัดการได้", ""],
+["Are you prepared to relocate?", "คุณพร้อมย้ายไปประจำที่ฐานต่างประเทศไหม", "ADL", [
+ "Yes, completely.",
+ "I've researched life in Dubai, including the cost of living, the climate and the crew accommodation, and I've discussed it with my family.",
+ "I'm ready to start as soon as the training date is confirmed."],
+ "ตอบ Yes ทันทีโดยไม่ลังเล แล้วแสดงว่าศึกษามาแล้ว", "Emirates"],
+["What do you think about sustainability in aviation?", "คุณคิดอย่างไรกับความยั่งยืนในอุตสาหกรรมการบิน", "PRE", [
+ "I think it's one of the most important challenges for airlines today.",
+ "Aviation connects the world, but it also produces emissions, so the industry has to grow responsibly.",
+ "I've read about more efficient aircraft, sustainable fuel and less plastic onboard. As crew I can help by reducing waste and following the recycling procedures."],
+ "ไม่ต้องรู้ลึก แค่รู้ 2–3 แนวทางและบอกว่าลูกเรือช่วยอะไรได้", "Qatar Airways (Fly to Success)"],
+["What is your opinion on a current global issue?", "คุณมีความเห็นอย่างไรต่อประเด็นระดับโลกในปัจจุบัน", "PRE", [
+ "One issue I follow is the fast growth of artificial intelligence.",
+ "It makes many jobs faster, but I believe it can't replace human warmth and judgement.",
+ "In service work, technology can handle the booking, but a nervous passenger still needs a real person to reassure them, and that's the part of the job I love."],
+ "เลี่ยงการเมืองและศาสนา เลือกหัวข้อกลาง ๆ เช่น เทคโนโลยี สิ่งแวดล้อม การท่องเที่ยว", "Qatar Airways (Fly to Success)"],
+["How do you feel about strict grooming standards and company rules?", "รู้สึกอย่างไรกับมาตรฐานการแต่งกายและกฎบริษัทที่เข้มงวด", "PRE", [
+ "I'm comfortable with them and I understand why they exist.",
+ "Crew represent the airline's image, and consistent standards show passengers that we're disciplined and professional.",
+ "My hotel also has strict rules on hair, nails and uniform, and I've followed them every day for three years."],
+ "กรรมการกำลังดูว่าคุณจะต่อต้านกฎไหม ตอบแบบยอมรับและเข้าใจเหตุผล", ""],
+["How do you feel about sharing accommodation with other crew?", "รู้สึกอย่างไรกับการพักร่วมกับลูกเรือคนอื่น", "PRE", [
+ "I'm happy to share, and I think it's a good way to settle in.",
+ "Living with colleagues from other countries is a chance to learn, as long as everyone is considerate.",
+ "I shared a house with five people abroad. We agreed on rules for cleaning and noise in the first week, and we're still friends today."],
+ "แสดงว่าคุณเป็นเพื่อนร่วมห้องที่เกรงใจคนอื่นและสื่อสารตรงไปตรงมา", ""],
+["What does teamwork mean to you?", "การทำงานเป็นทีมสำหรับคุณหมายถึงอะไร", "PRE", [
+ "Teamwork means putting the shared goal ahead of my own comfort.",
+ "No one can run a cabin alone, and a team works when people communicate and cover for each other.",
+ "At work, when I finish my section early I help the busiest colleague without being asked, and they do the same for me."],
+ "ให้นิยามสั้น ๆ แล้วยกพฤติกรรมจริงที่คุณทำเป็นประจำ", ""],
+["Which is more important, safety or service?", "ความปลอดภัยกับการบริการ อะไรสำคัญกว่ากัน", "PRE", [
+ "Safety always comes first.",
+ "Service makes a flight pleasant, but safety is what makes the flight possible at all.",
+ "For example, if the seatbelt sign comes on during the meal service, we stop serving and secure the cabin, even if passengers are waiting."],
+ "ตอบ safety ทันทีโดยไม่ลังเล แล้วบอกว่าทั้งสองอย่างไปด้วยกันได้", ""],
+["How do you stay healthy and fit?", "คุณดูแลสุขภาพและความแข็งแรงอย่างไร", "ADL", [
+ "I exercise regularly and I'm careful about sleep and food.",
+ "I swim twice a week, do yoga at home and try to eat a balanced diet with plenty of water.",
+ "I know crew need the strength to open doors, lift bags and stay alert on long flights, so I treat fitness as part of the job."],
+ "ถ้าว่ายน้ำได้ให้พูดด้วย หลายสายการบินมีทดสอบว่ายน้ำ", ""],
+["What does your family think about you becoming cabin crew?", "ครอบครัวคิดอย่างไรที่คุณจะเป็นลูกเรือ", "ADL", [
+ "They're very supportive and proud.",
+ "At first my mother worried about me living far away, so I explained the training, the safety standards and the crew accommodation.",
+ "Now she's the one reminding me to practise for my interview, so I can focus fully on the job."],
+ "สายการบินไม่อยากได้คนที่ครอบครัวคัดค้านและลาออกเร็ว", ""],
+["What would you do on a layover?", "ระหว่างพักค้างคืนต่างประเทศคุณจะทำอะไร", "ADL", [
+ "Rest comes first, so I'm fit for the return flight.",
+ "After sleeping, I'd explore a little with my crew, try the local food and visit a museum or market.",
+ "I'd always follow company rules about rest hours and alcohol and be back in good time before duty."],
+ "ต้องพูดเรื่องการพักผ่อนให้พร้อมบินก่อน แล้วค่อยพูดเรื่องเที่ยว", ""],
+["What does cultural diversity mean to you?", "ความหลากหลายทางวัฒนธรรมสำหรับคุณหมายถึงอะไร", "PRE", [
+ "It means people with different backgrounds bringing different strengths to the same team.",
+ "When we understand each other's customs, we serve passengers better and avoid misunderstandings.",
+ "For example, I learned from a colleague that some guests prefer not to shake hands, so now I greet them in the way they're comfortable with."],
+ "ใช้ตัวอย่างเล็ก ๆ ที่แสดงว่าคุณสังเกตและเคารพความต่าง", ""],
+["What are your salary expectations?", "คุณคาดหวังเงินเดือนเท่าไร", "ADL", [
+ "I'm happy with the standard package the airline offers for new crew.",
+ "I've read about the basic salary, flying pay and accommodation, and I think it's fair.",
+ "For me, the training and the chance to build a career here matter more than the starting salary."],
+ "อย่าต่อรองตัวเลขในรอบสัมภาษณ์ลูกเรือ โครงสร้างค่าตอบแทนเป็นมาตรฐานเดียวกัน", "Etihad Airways (Glassdoor)"],
+["Can you swim?", "คุณว่ายน้ำได้ไหม", "ADL", [
+ "Yes, I can swim comfortably without any aid.",
+ "I can swim at least 50 metres and tread water, and I practise at a public pool every week.",
+ "I understand swimming is essential for ditching training, so I've kept it up while preparing for this application."],
+ "ถ้ายังว่ายไม่คล่องให้เริ่มฝึกตั้งแต่ตอนนี้ และบอกตามจริงว่ากำลังเรียน", "Bangkok Airways (Lemon8)"]
+]]
+);
